@@ -1,18 +1,24 @@
 function ShowPassword(){
 
     const eye = document.getElementById('eye');
-    const eyeSlash = document.getElementById('eye-slash');
+    const eyeClose = document.getElementById('eye-close');
     const fieldPassword = document.getElementById('field-password');
 
-    if(eye.style === 'none'){
-
+    if(eye.style.display === 'none'){
         eye.style.display = 'block';
-        eyeSlash.display = 'none';
-        fieldPassword.type = 'password';
+        eyeClose.display = 'none';
+        fieldPassword.type = 'text';
     }else{
 
         eye.style.display = 'none';
-        eyeSlash.display = 'block';
+        eyeClose.display = 'block';
         fieldPassword.type = 'password'
     }
 };
+
+document.getElementById('bt-login').addEventListener('click', function(PaginaNaoRecarrega){
+
+    PaginaNaoRecarrega.preventDefault();
+    alert ('Logado com sucesso');
+
+});
